@@ -79,7 +79,11 @@ cd kernel/
 
 Then follow the instructions in [README.md](kernel/README.md)
 
-
+You can use the `Dockerfile` provided:
+```sh
+docker build -t maestro ./
+docker run -it --privileged -p 5900:5900 --device=/dev/kvm -v $(pwd)/../maestro:/root/maestro  maestro
+```
 
 ## Documentation
 
